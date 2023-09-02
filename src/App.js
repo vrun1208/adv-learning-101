@@ -1,25 +1,43 @@
-import logo from './logo.svg';
+import React from 'react';
+import {BrowserRouter as Router, Route, Link, Routes} from 'react-router-dom'
 import './App.css';
+import Card from './components/auth';
+import DropDown from './components/dropdown';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+const Home = () => <h1>Home</h1>;
+//const Auth = () => <h1>Auth</h1>;
+const Misc = () => <h1>Misc</h1>;
+
+export default function App() {
+  return(
+    <Router>
+      <div className='App'>
+        <nav className='links'>
+          <li className='list'>
+            <ul>
+              <Link to="/">Home</Link>
+            </ul>
+            <ul>
+              <Link to="/auth">Auth</Link>
+            </ul>
+            <ul>
+              <Link to="/drop">drop-down</Link>
+            </ul>
+            <ul>
+              <Link to="/misc">Misc</Link>
+            </ul>
+          </li>
+        </nav>
+        <Routes>
+          <Route exact path="/" Component={Home} /> 
+          <Route path="/auth" Component={Card} /> 
+          <Route  path="/drop" Component={DropDown} /> 
+          <Route  path="/misc" Component={Misc} /> 
+        </Routes>
+          
+        
+      </div>
+    </Router>
+  )
 }
-
-export default App;
