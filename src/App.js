@@ -2,6 +2,7 @@ import React from 'react';
 import {BrowserRouter as Router, Route, Link, Routes} from 'react-router-dom'
 import './App.css';
 import Card from './components/auth';
+import Dir from './components/directory';
 import DropDown from './components/dropdown';
 
 
@@ -25,6 +26,9 @@ export default function App() {
               <Link to="/drop">drop-down</Link>
             </ul>
             <ul>
+              <Link to="/dir">folders</Link>
+            </ul>
+            <ul>
               <Link to="/misc">Misc</Link>
             </ul>
           </li>
@@ -33,6 +37,7 @@ export default function App() {
           <Route exact path="/" Component={Home} /> 
           <Route path="/auth" Component={Card} /> 
           <Route  path="/drop" Component={DropDown} /> 
+          <Route  path="/dir" Component={Dir} /> 
           <Route  path="/misc" Component={Misc} /> 
         </Routes>
           
