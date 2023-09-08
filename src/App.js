@@ -1,6 +1,7 @@
 import React from 'react';
 import {BrowserRouter as Router, Route, Link, Routes} from 'react-router-dom'
 import './App.css';
+import Makedropdown from './components/adv-dropdown';
 import Card from './components/auth';
 import Dir from './components/directory';
 import DropDown from './components/dropdown';
@@ -26,6 +27,9 @@ export default function App() {
               <Link to="/drop">drop-down</Link>
             </ul>
             <ul>
+              <Link to="/dropdown">advanced-dropdown</Link>
+            </ul>
+            <ul>
               <Link to="/dir">folders</Link>
             </ul>
             <ul>
@@ -36,7 +40,8 @@ export default function App() {
         <Routes>
           <Route exact path="/" Component={Home} /> 
           <Route path="/auth" Component={Card} /> 
-          <Route  path="/drop" Component={DropDown} /> 
+          <Route  path="/drop" Component={DropDown} />
+          <Route  path="/dropdown" Component={Makedropdown} /> 
           <Route  path="/dir" Component={Dir} /> 
           <Route  path="/misc" Component={Misc} /> 
         </Routes>
