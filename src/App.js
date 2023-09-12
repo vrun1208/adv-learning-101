@@ -5,6 +5,7 @@ import Makedropdown from './components/adv-dropdown';
 import Card from './components/auth';
 import Dir from './components/directory';
 import DropDown from './components/dropdown';
+import Pagi from './components/pagination';
 
 
 const Home = () => <h1>Home</h1>;
@@ -33,6 +34,9 @@ export default function App() {
               <Link to="/dir">folders</Link>
             </ul>
             <ul>
+              <Link to="/page">Page</Link>
+            </ul>
+            <ul>
               <Link to="/misc">Misc</Link>
             </ul>
           </li>
@@ -43,6 +47,7 @@ export default function App() {
           <Route  path="/drop" Component={DropDown} />
           <Route  path="/dropdown" Component={Makedropdown} /> 
           <Route  path="/dir" Component={Dir} /> 
+          <Route exact path="/page" Component={Pagi} /> 
           <Route  path="/misc" Component={Misc} /> 
         </Routes>
           

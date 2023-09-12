@@ -1,3 +1,44 @@
+.products{
+  padding: 10px;
+  margin: 20px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.items {
+  width: 150px;
+  align-items: center;
+  padding: 20px;
+  background-color: grey;
+  border-radius: 5px;
+}
+
+.items > img {
+  width: 100%;
+  height: 90%;
+  object-fit: cover;
+  margin-bottom: 7px;
+}
+
+.pagination {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination > span {
+  border: 1px  solid black;
+  padding: 10px ;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.pagination__selected {
+  background-color: blueviolet;
+}
+
 .folder {
   font-size: large;
   font-family: sans-serif;
@@ -19,8 +60,9 @@
 }
 
 .App {
+  display: block;
+  align-items: center;
   text-align: center;
-  margin: 10%;
 }
 
 .links {
